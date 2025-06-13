@@ -176,7 +176,6 @@ img {
   min-width: 169px;
   display: inline-block;
   margin: 0 auto;
-  transition: background-color 0.3s;
 }
 
 .button-primary:hover,
