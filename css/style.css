@@ -190,24 +190,23 @@ img {
 
 .features-section {
   padding: 120px 0;
-  background-color: #fff;
 }
 
 .features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .feature-item {
+  width: calc((100% - 72px) / 4);
+  padding: 24px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 264px;
-  padding: 0;
-  box-sizing: border-box;
+  align-items: center;
 }
 
 .feature-icon-box {
@@ -227,31 +226,32 @@ img {
   width: 64px;
   height: 64px;
   display: block;
-  fill: #2e2f42;
+  fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.feature-item:hover .feature-icon-box {
+  background-color: #2196f3;
+}
+
+.feature-item:hover .feature-icon-box svg {
+  fill: #ffffff;
+}
+
 .feature-title {
-  font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin: 0 0 8px 0;
-  text-align: left;
+  margin-bottom: 8px;
+  color: #2E2F42;
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
 }
 
 .feature-text {
-  font-family: "Roboto", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #434455;
   margin: 0;
-  text-align: left;
+  font-size: 16px;
+  color: #434455;
+  font-family: "Roboto", sans-serif;
 }
-
 
 .team-section {
   padding: 120px 0;
