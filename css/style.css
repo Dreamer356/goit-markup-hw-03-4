@@ -503,10 +503,11 @@ img {
 }
 
 .footer-text {
-  max-width: 264px;
+  color: #ffffff;
   font-size: 16px;
   line-height: 1.5;
-  color: #e7e9fc;
+  letter-spacing: 0.02em;
+  margin-top: 16px;
 }
 
 .footer-social {
