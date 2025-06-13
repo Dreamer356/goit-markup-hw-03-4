@@ -202,28 +202,11 @@ img {
 }
 
 .feature-item {
-  flex-basis: calc((100% - 72px) / 4);
-  align-items: flex-start;
-}
-
-.features-section {
-  padding: 120px 0;
-}
-
-.features-list {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.feature-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 264px;
-  padding: 24px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -244,7 +227,7 @@ img {
   width: 64px;
   height: 64px;
   display: block;
-  fill: #212121;
+  fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -268,6 +251,7 @@ img {
   margin: 0;
   text-align: left;
 }
+
 
 .team-section {
   padding: 120px 0;
