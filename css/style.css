@@ -253,10 +253,15 @@ img {
   font-family: "Roboto", sans-serif;
 }
 
+:root {
+  --icon-fill: #f4f4fd;
+}
+
 .team-section {
   padding: 120px 0;
   background-color: #f4f4fd;
 }
+
 .team-title {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
@@ -267,6 +272,7 @@ img {
   color: #2e2f42;
   margin-bottom: 72px;
 }
+
 .team-list {
   display: flex;
   gap: 24px;
@@ -275,29 +281,36 @@ img {
   margin: 0;
   justify-content: center;
 }
+
 .team-item {
   background-color: #fff;
   border-radius: 0 0 4px 4px;
-  box-shadow: 0 2px 8px rgba(46, 47, 66, 0.08);
+  box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
   width: 264px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 32px;
 }
+
 .team-photo {
   border-radius: 4px 4px 0 0;
   width: 264px;
   height: 260px;
   object-fit: cover;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
+
 .team-info {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 32px 0;
 }
+
 .team-name {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 500;
@@ -308,6 +321,7 @@ img {
   margin: 0 0 8px 0;
   text-align: center;
 }
+
 .team-role {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
@@ -317,14 +331,16 @@ img {
   margin: 0 0 16px 0;
   text-align: center;
 }
+
 .team-social-list {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .team-social-link {
   display: flex;
   align-items: center;
@@ -335,15 +351,18 @@ img {
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: #404bbf;
 }
-.team-social-link svg {
-  fill: #fff;
+
+.team-social-icon {
+  fill: var(--icon-fill, #f4f4fd);
   width: 16px;
   height: 16px;
 }
+
 
 .portfolio-section {
   padding: 120px 0;
