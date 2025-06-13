@@ -197,7 +197,7 @@ img {
 
 .feature-item {
   flex-basis: calc((100% - 72px) / 4);
-  text-align: center;
+  align-items: flex-start;
 }
 
 .features-section {
@@ -205,20 +205,20 @@ img {
 }
 
 .features-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .feature-item {
-  width: calc((100% - 72px) / 4);
-  padding: 24px;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 264px;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .feature-icon-box {
@@ -232,7 +232,6 @@ img {
   border: 1px solid #8e8f99;
   margin-bottom: 8px;
   box-sizing: border-box;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-icon-box svg {
@@ -243,86 +242,117 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feature-item:hover .feature-icon-box {
-  background-color: #2196f3;
-}
-
-.feature-item:hover .feature-icon-box svg {
-  fill: #ffffff;
-}
-
 .feature-title {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 8px;
-  margin-top: 0;
-  text-align: center;
+  margin: 0 0 8px 0;
+  text-align: left;
 }
 
 .feature-text {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #434455;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
-
 
 .team-section {
-  background-color: #f4f4fd;
   padding: 120px 0;
+  background-color: #f4f4fd;
 }
-
 .team-title {
-  font-size: 36px;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
+  font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
   margin-bottom: 72px;
 }
-
 .team-list {
   display: flex;
   gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
-
-.team-member {
+.team-item {
   background-color: #fff;
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 8px rgba(46, 47, 66, 0.08);
   width: 264px;
-  box-shadow: 0 2px 1px rgba(0,0,0,0.08),
-              0 1px 1px rgba(0,0,0,0.16),
-              0 1px 6px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-bottom: 32px;
 }
-
-.member-info {
-  padding: 32px 0;
+.team-photo {
+  border-radius: 4px 4px 0 0;
+  width: 264px;
+  height: 260px;
+  object-fit: cover;
+  margin-bottom: 32px;
+}
+.team-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team-name {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin: 0 0 8px 0;
   text-align: center;
 }
-
-.member-name {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  color: #2e2f42;
-  margin-bottom: 8px;
-}
-
-.member-position {
-  font-size: 16px;
+.team-role {
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
+  font-size: 16px;
   line-height: 1.5;
   color: #434455;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+.team-social-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: #404bbf;
+}
+.team-social-link svg {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
 }
 
 .portfolio-section {
@@ -377,6 +407,43 @@ img {
   line-height: 1.5;
   color: #434455;
 }
+.portfolio-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;    
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0%);
+}
 
 .footer {
   background-color: #2e2f42;
@@ -390,20 +457,35 @@ img {
   padding: 0 15px;
 }
 
+.footer-container {
+  display: flex;
+  gap: 120px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer-logo-col {
+  max-width: 264px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .footer-logo {
-  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  display: inline-block;
   margin-bottom: 16px;
+  text-decoration: none;
 }
 
 .footer-logo-accent {
-  color: #f4f4fd;
+  color: #ffffff;
 }
 
 .footer-text {
@@ -411,6 +493,50 @@ img {
   font-size: 16px;
   line-height: 1.5;
   color: #e7e9fc;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-social-title {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #2f00ff;
+}
+
+.footer-social-link svg {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
 }
 
 .visually-hidden {
