@@ -458,10 +458,6 @@ img {
   transform: translateY(0%);
 }
 
-:root {
-  --icon-fill: #f4f4fd;
-}
-
 .footer {
   background-color: #2e2f42;
   color: #fff;
